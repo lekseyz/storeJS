@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+.header {
+  background-color: #801a1a; 
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header .logo {
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .logo img {
+  height: 40px; 
+  margin-right: 10px; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .nav {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header .nav a:hover {
+  color: #d3d3d3; 
+}
+
+
+ul.custom-list {
+  list-style-type: none; 
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+ul.custom-list li {
+  background-color: #f8f8f8;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start; /* Выровнять элементы по левому краю */
+  width: 100%; /* Элемент занимает всю ширину контейнера */
+  box-sizing: border-box; /* Включаем padding в ширину элемента */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+ul.custom-list li:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень при наведении */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.custom-list li .title {
+  font-size: 24px; /* Крупный шрифт для заголовка */
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+ul.custom-list li .description {
+  font-size: 16px; /* Средний шрифт для описания */
+  color: #666;
+  margin-bottom: 10px;
+}
+
+ul.custom-list li .price {
+  font-size: 14px; /* Маленький шрифт для цены */
+  font-weight: bold;
+  color: #000;
+  align-self: flex-end; /* Выровнять цену справа */
 }
